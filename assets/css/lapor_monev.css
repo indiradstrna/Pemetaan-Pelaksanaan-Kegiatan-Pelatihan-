@@ -1,0 +1,770 @@
+/* ==========================================================
+   Lapor Capaian M&E Portal Sekolah - Styling
+   Path: assets/css/lapor_monev.css
+   Project: Web GIS SEAMEO BIOTROP
+   ========================================================== */
+
+:root {
+    --monev-green: #15803d;
+    --monev-green-dark: #166534;
+    --monev-green-light: #dcfce7;
+    --monev-green-subtle: #f0fdf4;
+    --monev-amber: #b45309;
+    --monev-amber-light: #fef3c7;
+    --monev-blue: #1d4ed8;
+    --monev-blue-light: #dbeafe;
+    --monev-border: #e5e7eb;
+    --monev-border-subtle: #f3f4f6;
+    --monev-card-bg: #ffffff;
+    --monev-bg: #f9fafb;
+    --monev-text: #111827;
+    --monev-text-muted: #6b7280;
+    --monev-radius: 16px;
+    --monev-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* ==================== Wrapper Utama ==================== */
+.lapor-monev-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ==================== Page Header ==================== */
+.lapor-page-header {
+    margin-bottom: 24px;
+}
+
+.lapor-page-header .page-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--monev-text);
+    margin: 0 0 6px 0;
+    letter-spacing: -0.02em;
+}
+
+.lapor-page-header .page-subtitle {
+    font-size: 0.95rem;
+    color: var(--monev-text-muted);
+    margin: 0;
+}
+
+/* ==================== Program Selector & School Info Card ==================== */
+.lapor-header-card {
+    background: var(--monev-card-bg);
+    border: 1px solid var(--monev-border);
+    border-radius: var(--monev-radius);
+    padding: 24px;
+    box-shadow: var(--monev-shadow);
+    margin-bottom: 24px;
+}
+
+.lapor-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--monev-border-subtle);
+}
+
+.sekolah-profile-badge {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.sekolah-badge-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--monev-green-light);
+    color: var(--monev-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.sekolah-badge-details h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--monev-text);
+}
+
+.sekolah-badge-details .sekolah-role-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--monev-green);
+    background: var(--monev-green-subtle);
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-top: 4px;
+}
+
+.program-selector-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.program-selector-label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--monev-text-muted);
+    white-space: nowrap;
+}
+
+.program-select-input {
+    min-width: 320px;
+    padding: 11px 16px;
+    border: 1.5px solid var(--monev-border);
+    border-radius: 10px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--monev-text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.program-select-input:hover {
+    border-color: var(--monev-green);
+}
+
+.program-select-input:focus {
+    outline: none;
+    border-color: var(--monev-green);
+    box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.12);
+}
+
+.lapor-header-info {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.program-info-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.program-info-title h4 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--monev-text);
+}
+
+.program-badge-period {
+    background: #eef2ff;
+    color: #4338ca;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 6px;
+}
+
+.program-info-desc {
+    color: var(--monev-text-muted);
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+/* ==================== Grid Layout ==================== */
+.lapor-monev-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 48px;
+}
+
+/* ==================== Left Panel: Form Table ==================== */
+.lapor-panel-card {
+    background: var(--monev-card-bg);
+    border: 1px solid var(--monev-border);
+    border-radius: var(--monev-radius);
+    padding: 24px;
+    box-shadow: var(--monev-shadow);
+}
+
+.panel-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--monev-border);
+}
+
+.panel-card-header h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--monev-text);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.panel-card-header .header-hint {
+    font-size: 0.84rem;
+    color: var(--monev-text-muted);
+}
+
+/* Tabel Checklist Modern */
+.tabel-monev-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--monev-border);
+    border-radius: 12px;
+    background: #fff;
+}
+
+.tabel-monev {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.tabel-monev thead {
+    background: #f8fafc;
+    border-bottom: 1px solid var(--monev-border);
+}
+
+.tabel-monev th {
+    padding: 14px 16px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--monev-text-muted);
+    white-space: nowrap;
+}
+
+.tabel-monev tbody tr {
+    border-bottom: 1px solid var(--monev-border-subtle);
+    transition: background-color 0.15s ease;
+}
+
+.tabel-monev tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabel-monev tbody tr:hover {
+    background-color: #fafbfd;
+}
+
+.tabel-monev td {
+    padding: 18px 16px;
+    vertical-align: top;
+}
+
+/* Kolom 1: Indikator */
+.col-indikator {
+    width: 28%;
+    min-width: 240px;
+}
+
+.indikator-item-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.indikator-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    color: #475569;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.indikator-title-wrap strong {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--monev-text);
+    line-height: 1.35;
+}
+
+.indikator-title-wrap p {
+    margin: 4px 0 0;
+    font-size: 0.8rem;
+    color: var(--monev-text-muted);
+    line-height: 1.4;
+}
+
+/* Kolom 2: Status Pills */
+.col-status {
+    width: 24%;
+    min-width: 210px;
+}
+
+.status-pill-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.status-pill-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--monev-border);
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.status-pill-option:hover {
+    border-color: #cbd5e1;
+    background: #f8fafc;
+}
+
+.status-pill-option input[type="radio"] {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0;
+    accent-color: var(--monev-green);
+}
+
+.status-pill-option .status-text {
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Warna Aktif saat Radio Dipilih */
+.status-pill-option.active-tercapai {
+    background: var(--monev-green-subtle);
+    border-color: #86efac;
+}
+.status-pill-option.active-tercapai .status-text {
+    color: var(--monev-green-dark);
+}
+
+.status-pill-option.active-berjalan {
+    background: #fffbeb;
+    border-color: #fde68a;
+}
+.status-pill-option.active-berjalan .status-text {
+    color: var(--monev-amber);
+}
+
+.status-pill-option.active-belum {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+.status-pill-option.active-belum .status-text {
+    color: #475569;
+}
+
+/* Kolom 3: Dampak Kuantitatif */
+.col-dampak {
+    width: 22%;
+    min-width: 200px;
+}
+
+.dampak-field-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dampak-field-item label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--monev-text-muted);
+    margin-bottom: 4px;
+}
+
+.input-unit-wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-unit-wrap input {
+    width: 100%;
+    padding: 8px 50px 8px 12px;
+    border: 1px solid var(--monev-border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--monev-text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.input-unit-wrap input:focus {
+    outline: none;
+    border-color: var(--monev-green);
+    box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.1);
+}
+
+.input-unit-wrap input:disabled {
+    background: #f8fafc;
+    color: #94a3b8;
+    border-color: #e2e8f0;
+    cursor: not-allowed;
+}
+
+.input-unit-wrap .unit-tag {
+    position: absolute;
+    right: 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--monev-text-muted);
+    pointer-events: none;
+}
+
+.no-dampak-text {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* Kolom 4: Bukti & Kendala */
+.col-evidence {
+    width: 26%;
+    min-width: 220px;
+}
+
+.evidence-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upload-action-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.btn-file-upload {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: #f8fafc;
+    border: 1.5px dashed #cbd5e1;
+    border-radius: 8px;
+    color: #334155;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-file-upload:hover {
+    background: var(--monev-green-subtle);
+    border-color: var(--monev-green);
+    color: var(--monev-green);
+}
+
+.uploaded-preview-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    font-size: 0.78rem;
+}
+
+.uploaded-preview-badge a {
+    color: var(--monev-green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.uploaded-preview-badge a:hover {
+    text-decoration: underline;
+}
+
+.file-selected-name {
+    font-size: 0.75rem;
+    color: var(--monev-green);
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.kendala-textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--monev-border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.82rem;
+    color: var(--monev-text);
+    resize: vertical;
+    min-height: 56px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.kendala-textarea:focus {
+    outline: none;
+    border-color: var(--monev-green);
+    box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.1);
+}
+
+/* ==================== Right Sidebar ==================== */
+.lapor-monev-sidebar {
+    position: sticky;
+    top: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-card {
+    background: var(--monev-card-bg);
+    border: 1px solid var(--monev-border);
+    border-radius: var(--monev-radius);
+    padding: 22px;
+    box-shadow: var(--monev-shadow);
+}
+
+.sidebar-card-title {
+    margin: 0 0 16px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--monev-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Progress Section */
+.progress-bar-wrap {
+    margin-bottom: 16px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.progress-header span {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--monev-text-muted);
+}
+
+.progress-percentage {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--monev-green);
+}
+
+.progress-track {
+    width: 100%;
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #22c55e, #15803d);
+    border-radius: 999px;
+    transition: width 0.35s ease, background 0.35s ease;
+}
+
+/* Stats Badges */
+.progress-breakdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.breakdown-item {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid var(--monev-border-subtle);
+    display: flex;
+    flex-direction: column;
+}
+
+.breakdown-item .b-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--monev-text-muted);
+}
+
+.breakdown-item .b-val {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--monev-text);
+    margin-top: 2px;
+}
+
+.breakdown-item.item-tercapai {
+    background: var(--monev-green-subtle);
+    border-color: #bbf7d0;
+}
+.breakdown-item.item-tercapai .b-val { color: var(--monev-green); }
+
+.breakdown-item.item-berjalan {
+    background: #fffbeb;
+    border-color: #fde68a;
+}
+.breakdown-item.item-berjalan .b-val { color: var(--monev-amber); }
+
+/* Timeline History */
+.timeline-mini-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.timeline-mini-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.82rem;
+}
+
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--monev-green);
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.timeline-info strong {
+    display: block;
+    color: var(--monev-text);
+}
+
+.timeline-info span {
+    color: var(--monev-text-muted);
+    font-size: 0.76rem;
+}
+
+/* Submit Action Button */
+.btn-monev-submit {
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--monev-green);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 0.98rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 14px rgba(21, 128, 61, 0.25);
+}
+
+.btn-monev-submit:hover:not(:disabled) {
+    background: var(--monev-green-dark);
+    box-shadow: 0 6px 20px rgba(21, 128, 61, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn-monev-submit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.submit-safe-hint {
+    margin: 10px 0 0;
+    font-size: 0.78rem;
+    color: var(--monev-text-muted);
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Spinner */
+.spinner-border-sm {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ==================== Responsif ==================== */
+@media (max-width: 1200px) {
+    .lapor-monev-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lapor-monev-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .lapor-header-top {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .program-select-input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .lapor-panel-card {
+        padding: 16px;
+    }
+
+    .tabel-monev th,
+    .tabel-monev td {
+        padding: 12px 10px;
+    }
+}

@@ -1,0 +1,1243 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>GeoImpact DSS - Edu-Monitoring GIS</title><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-tint":"#006c4a","secondary-fixed-dim":"#93ccff","background":"#faf8ff","on-tertiary-fixed":"#2a1700","surface-variant":"#dae2fd","error":"#ba1a1a","secondary-fixed":"#cce5ff","tertiary":"#825100","tertiary-fixed-dim":"#ffb95f","surface-container-high":"#e2e7ff","surface-container-lowest":"#ffffff","error-container":"#ffdad6","surface-container-low":"#f2f3ff","outline":"#6d7a72","on-tertiary-container":"#fffbff","on-secondary-fixed":"#001d31","on-surface-variant":"#3d4a42","on-tertiary-fixed-variant":"#653e00","on-error-container":"#93000a","tertiary-container":"#a36700","on-error":"#ffffff","on-surface":"#131b2e","tertiary-fixed":"#ffddb8","surface":"#faf8ff","inverse-surface":"#283044","primary-fixed":"#85f8c4","outline-variant":"#bccac0","surface-container-highest":"#dae2fd","surface-bright":"#faf8ff","on-primary":"#ffffff","on-tertiary":"#ffffff","primary-fixed-dim":"#68dba9","on-primary-fixed":"#002114","on-secondary":"#ffffff","on-primary-fixed-variant":"#005137","secondary-container":"#5bb8fe","primary-container":"#00855d","on-background":"#131b2e","surface-container":"#eaedff","on-secondary-fixed-variant":"#004b73","inverse-on-surface":"#eef0ff","primary":"#006948","on-secondary-container":"#00476e","surface-dim":"#d2d9f4","on-primary-container":"#f5fff7","secondary":"#006398","inverse-primary":"#68dba9"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter-desktop":"1.25rem","margin":"1rem","space-lg":"1.5rem","margin-desktop":"1.5rem","gutter":"1rem","space-md":"1rem","space-xl":"2rem","space-sm":"0.5rem","space-xs":"0.25rem"},fontFamily:{"label-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"metric-num-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"metric-num-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},fontSize:{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"metric-num-md":["20px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"metric-num-lg":["28px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg shrink-0"><div class="flex items-center gap-space-sm"><img alt="GeoEdu Impact DSS Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UitXZxBup7h7zwTShAHhp17JOCnt-XfMS6oTtc5hnQF-XmdH2LXg2h-OkiW7wh5dtWHqiiPr4tCM6BxWkuiS0VLvGotY-vZWK53j4kz-fhgWSNa2rzEAF4LdXaqBNMzrYHRsB79CSMgXu7Lya0rTq-cYv3N9b64lH33EyY75AVsa-edXu6jF-umjLGSoC7AY0f2isIlq75rvZbzhF1eRD66wa99gCxynnAC4W-sqIT6WXE3LNr9wu4jN0"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-tight">GeoImpact DSS</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Edu-Monitoring GIS</span></div></div><div class="hidden xl:inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>Status Data: Realtime Q3 2024</div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-sm"><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="peta-interaktif-gis" href="#">Peta Interaktif (GIS)</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="matriks-evaluasi-dss" href="#">Matriks Evaluasi (DSS)</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="laporan-ekspor-data" href="#">Laporan &amp; Ekspor Data</a><a class="px-space-md py-space-sm rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all duration-150" data-path="dokumen-action-plan" href="#">Dokumen Action Plan</a></nav><div class="flex items-center gap-space-md shrink-0"><div class="hidden sm:flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-tight font-semibold">Bambang Pratama</span><span class="font-label-sm text-label-sm text-on-surface-variant">M&amp;E Lead Specialist</span></div><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-fixed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6p0se-GqLIPSrq97cSj6ysh-UXW2RCB0i4mK5ZWVcwrmM-fJGV4thYS5R48lZ_NJoQR69Ed1t5ymPSF6QEH4MX6oBAVkJG5GxuTzuW8cXS6n2hW5JbfWpnJgKkAU0K6leFKoELbGcEkXMextf8wsbHq8kZ0dXKg_m5lmmox9S1L6kNakGQit84Qy98Oi33albs5ERDzoNHvRJGWT1VcZAVwTnEgZijjrcN-vZQlFhSeEAnK3x1i6k"></div></div></div></header><main class="w-full pt-16 bg-background relative min-h-[calc(100vh-4rem)] flex flex-col"><div class="flex flex-col w-full">
+<!-- Top Context & Navigation Sync Script -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Sync active state in parent shell navigation bar if present
+      const navLinks = document.querySelectorAll("header nav a");
+      navLinks.forEach(link => {
+        if (link.getAttribute("data-path") === "matriks-evaluasi-dss") {
+          link.className = "px-space-md py-space-sm rounded-lg font-label-md text-label-md bg-primary-container text-on-primary-container font-bold shadow-sm transition-all duration-150";
+        }
+      });
+    });
+  </script>
+<!-- Page Header & Tactical Filter Sub-Bar -->
+<section class="w-full bg-surface-container-lowest shadow-sm px-gutter-desktop py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Sistem Pendukung Keputusan</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-semibold">Matriks Evaluasi &amp; Pemeringkatan SAW</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-on-surface">Q3 2024</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Matriks Evaluasi Rubrik DSS &amp; Perangkingan Prioritas</h1>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+            Algoritma SAW Aktif
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">
+          Komparasi multi-kriteria berbasis pembobotan 4 pilar program edukasi berkelanjutan. Menentukan kelayakan replikasi mandiri hibah Tahap II serta memetakan prioritas intervensi CSR terarah.
+        </p>
+</div>
+<!-- Action Button Group -->
+<div class="flex items-center flex-wrap gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-all shadow-sm" id="btn-weight-sim" onclick="toggleSimModal()">
+<span class="material-symbols-outlined text-base text-primary">tune</span>
+<span>Simulasi Bobot AHP/SAW</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-all shadow-sm">
+<span class="material-symbols-outlined text-base text-secondary">file_download</span>
+<span>Ekspor Matriks (XLS/PDF)</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm" id="compare-btn">
+<span class="material-symbols-outlined text-base">balance</span>
+<span id="compare-text">Bandingkan Terpilih (0/3)</span>
+</button>
+</div>
+</div>
+<!-- Quick Cascading Administrative Filter Bar -->
+<div class="pt-space-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-sm">
+<!-- Wilayah Provinsi -->
+<div class="flex flex-col bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Provinsi</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer">
+<option selected="">Jawa Barat (32 Sekolah)</option>
+<option>Jawa Tengah (18 Sekolah)</option>
+<option>Jawa Timur (24 Sekolah)</option>
+<option>D.I. Yogyakarta (12 Sekolah)</option>
+</select>
+</div>
+<!-- Kabupaten / Kota -->
+<div class="flex flex-col bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Kabupaten / Kota</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer">
+<option selected="">Semua Kab/Kota (Terseleksi)</option>
+<option>Kab. Bandung (14 Sekolah)</option>
+<option>Kab. Bandung Barat (8 Sekolah)</option>
+<option>Kab. Sumedang (6 Sekolah)</option>
+<option>Kota Cimahi (4 Sekolah)</option>
+</select>
+</div>
+<!-- Program Track -->
+<div class="flex flex-col bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Track Modul Program</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer">
+<option selected="">Semua Modul Terpadu</option>
+<option>Smart Urban Farming</option>
+<option>Circular Economy</option>
+<option>Leadership &amp; Student Org (LSO)</option>
+</select>
+</div>
+<!-- Periode Evaluasi -->
+<div class="flex flex-col bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Tahun Ajaran / Triwulan</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer">
+<option selected="">Q3 2024 (Aktual)</option>
+<option>Q2 2024 (Verifikasi Lapangan)</option>
+<option>Q1 2024 (Baseline Awal)</option>
+<option>TA 2023-2024 (Tahunan)</option>
+</select>
+</div>
+<!-- Tingkat Kemandirian DSS -->
+<div class="flex flex-col bg-surface-container-low px-space-sm py-1.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Kategori Kemandirian DSS</span>
+<select class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer">
+<option selected="">Semua Kategori (100%)</option>
+<option>Mandiri / Replikasi (≥ 80.0)</option>
+<option>Berkembang (60.0 - 79.9)</option>
+<option>Prioritas Intervensi (&lt; 60.0)</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Main Content Space -->
+<div class="w-full px-gutter-desktop py-space-lg flex flex-col gap-space-lg">
+<!-- KPI Summary Ribbon Cards (Dense 8px Rhythm) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Total Unit Dinilai</span>
+<span class="p-1 rounded-lg bg-surface-container text-primary material-symbols-outlined text-lg">school</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-num-lg text-metric-num-lg text-on-surface">32</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sekolah Target CSR</span>
+</div>
+<div class="mt-space-xs flex items-center gap-1 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span>100% tervalidasi M&amp;E Q3</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Rata-rata Skor DSS</span>
+<span class="p-1 rounded-lg bg-surface-container text-secondary material-symbols-outlined text-lg">analytics</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-num-lg text-metric-num-lg text-on-surface">81.4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 100 Skala SAW</span>
+</div>
+<div class="mt-space-xs flex items-center gap-1 font-body-sm text-body-sm text-primary">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+4.2 pts dibanding baseline Q1</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Siap Mandiri &amp; Replikasi</span>
+<span class="p-1 rounded-lg bg-primary-fixed text-on-primary-fixed material-symbols-outlined text-lg">verified</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-num-lg text-metric-num-lg text-on-surface">14</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Sekolah (43.8%)</span>
+</div>
+<div class="mt-space-xs flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>Kandidat Center of Excellence</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Prioritas Intervensi CSR</span>
+<span class="p-1 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed material-symbols-outlined text-lg">priority_high</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-num-lg text-metric-num-lg text-tertiary">6</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Sekolah (18.7%)</span>
+</div>
+<div class="mt-space-xs flex items-center gap-1 font-body-sm text-body-sm text-error">
+<span class="material-symbols-outlined text-sm">warning</span>
+<span>Butuh penguatan kurikulum &amp; LSO</span>
+</div>
+</div>
+</div>
+<!-- MCDM / SAW Weight Allocation Interactive Banner -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-surface-container text-primary">
+<span class="material-symbols-outlined text-xl">balance</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Struktur Pembobotan Kriteria DSS (Simple Additive Weighting)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bobot matriks ditentukan melalui normalisasi Analytic Hierarchy Process (AHP) bersama Dewan Ahli Agribisnis &amp; Kemdikbud.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>Konfigurasi Terverifikasi Konsultan CSR</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Pilar 1 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Pilar I</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm font-bold text-on-surface">Bobot 25%</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Infrastruktur &amp; Fasilitas</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Greenhouse pintar, sensor IoT, instalasi irigasi tetes, dan komposter biogas.</p>
+<div class="mt-2 w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 25%"></div>
+</div>
+</div>
+<!-- Pilar 2 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Pilar II</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm font-bold text-on-surface">Bobot 30%</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Kurikulum &amp; Guru</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Modul P5 terintegrasi, jam mengajar vokasi guru, sertifikasi TOT urban farming.</p>
+<div class="mt-2 w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 30%"></div>
+</div>
+</div>
+<!-- Pilar 3 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Pilar III</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm font-bold text-on-surface">Bobot 20%</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Keterlibatan Siswa &amp; Gender</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Presensi praktik siswa, rasio gender kepemimpinan LSO, karya ilmiah siswa.</p>
+<div class="mt-2 w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 20%"></div>
+</div>
+</div>
+<!-- Pilar 4 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Pilar IV</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm font-bold text-on-surface">Bobot 25%</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Circular &amp; Kemandirian</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Penjualan sayur hidroponik, bank sampah sekolah, dan dana kas operasional mandiri.</p>
+<div class="mt-2 w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 25%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Ranking & DSS Matrix Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header Bar -->
+<div class="px-space-md py-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Pemeringkatan Matriks Evaluasi (Ranking DSS)</span>
+<span class="text-xs px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-mono">Total 32 Sekolah</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-on-surface-variant absolute left-2.5 text-base">search</span>
+<input class="pl-8 pr-3 py-1.5 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface focus:outline-none w-56 shadow-sm" placeholder="Cari nama sekolah / NPSN..." type="text">
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Urutkan:</span>
+<span class="font-bold text-on-surface">Skor DSS Tertinggi (Desc)</span>
+</div>
+</div>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1100px]">
+<thead>
+<tr class="bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-space-sm px-space-md w-12 text-center">
+<input class="rounded accent-primary cursor-pointer" id="select-all" type="checkbox">
+</th>
+<th class="py-space-sm px-space-md w-16 text-center">Rank</th>
+<th class="py-space-sm px-space-md min-w-[240px]">Sekolah &amp; Wilayah</th>
+<th class="py-space-sm px-space-md min-w-[140px]">Program Modul</th>
+<th class="py-space-sm px-space-md min-w-[110px]">P1: Sarpras (25%)</th>
+<th class="py-space-sm px-space-md min-w-[110px]">P2: Guru (30%)</th>
+<th class="py-space-sm px-space-md min-w-[130px]">P3: Siswa/Gender (20%)</th>
+<th class="py-space-sm px-space-md min-w-[110px]">P4: Circular (25%)</th>
+<th class="py-space-sm px-space-md min-w-[100px] text-center">Skor DSS</th>
+<th class="py-space-sm px-space-md min-w-[140px]">Status Kelayakan</th>
+<th class="py-space-sm px-space-md min-w-[180px]">Rekomendasi Tindakan DSS</th>
+<th class="py-space-sm px-space-md text-right min-w-[100px]">Aksi</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Top School Rank 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="school-checkbox rounded accent-primary cursor-pointer" type="checkbox" value="SMK N 1 Pertanian Majalaya">
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed font-metric-num-md text-metric-num-md font-extrabold shadow-sm">1</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">SMK Negeri 1 Majalaya</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-mono">NPSN: 20228391</span>
+<span>•</span>
+<span>Kec. Majalaya, Kab. Bandung</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Urban Farming</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Circular</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">94.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 94%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">92.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 92%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-xs">
+<span class="font-bold">90.5</span>
+<span class="text-on-surface-variant font-mono">49:51</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 49%" title="Siswa Laki-laki"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 51%" title="Siswa Perempuan"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">91.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 91%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-metric-num-md text-metric-num-md font-extrabold shadow-sm">91.9</span>
+<span class="text-label-sm font-semibold text-primary">Top 1</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">verified</span>
+                  Mandiri / Unggul
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Siap Replikasi Hibah Tahap 2</span>
+<span class="text-xs text-on-surface-variant">Rekomendasi jadi Pusat Pelatihan Sub-Rayon</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="openDrawer('SMK Negeri 1 Majalaya', '20228391', '91.9', 'Mandiri / Unggul', '94.0', '92.0', '90.5', '91.0')" title="Detail Evaluasi Rubrik">
+<span class="material-symbols-outlined text-lg">assignment</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-secondary transition-colors" title="Lihat Lokasi di GIS">
+<span class="material-symbols-outlined text-lg">map</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Rank 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="school-checkbox rounded accent-primary cursor-pointer" type="checkbox" value="SMA Negeri 2 Banjaran">
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed font-metric-num-md text-metric-num-md font-extrabold shadow-sm">2</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">SMA Negeri 2 Banjaran</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-mono">NPSN: 20206120</span>
+<span>•</span>
+<span>Kec. Banjaran, Kab. Bandung</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Urban Farming</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">LSO Lead</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">88.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 88%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">90.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 90%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-xs">
+<span class="font-bold">92.0</span>
+<span class="text-on-surface-variant font-mono">52:48</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 52%"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 48%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">84.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 84%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container font-metric-num-md text-metric-num-md font-extrabold text-on-surface">88.4</span>
+<span class="text-label-sm font-semibold text-secondary">Top 2</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">verified</span>
+                  Mandiri / Unggul
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Akselerasi Green Market</span>
+<span class="text-xs text-on-surface-variant">Penguatan kemitraan offtaker sayur lokal</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="openDrawer('SMA Negeri 2 Banjaran', '20206120', '88.4', 'Mandiri / Unggul', '88.0', '90.0', '92.0', '84.0')">
+<span class="material-symbols-outlined text-lg">assignment</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">map</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Rank 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="school-checkbox rounded accent-primary cursor-pointer" type="checkbox" value="SMK Karya Pembangunan Margahayu">
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-metric-num-md text-metric-num-md font-extrabold shadow-sm">3</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">SMK Karya Pembangunan</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-mono">NPSN: 20228512</span>
+<span>•</span>
+<span>Kec. Margahayu, Kab. Bandung</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Circular</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">LSO Lead</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">86.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 86%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">84.5</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 84.5%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-xs">
+<span class="font-bold">89.0</span>
+<span class="text-on-surface-variant font-mono">45:55</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 45%"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 55%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">87.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 87%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container font-metric-num-md text-metric-num-md font-extrabold text-on-surface">86.4</span>
+<span class="text-label-sm font-semibold text-tertiary">Top 3</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">verified</span>
+                  Mandiri / Unggul
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Validasi Scale-up CSR</span>
+<span class="text-xs text-on-surface-variant">Optimasi Bank Sampah Organik ke Daur Ulang</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="openDrawer('SMK Karya Pembangunan', '20228512', '86.4', 'Mandiri / Unggul', '86.0', '84.5', '89.0', '87.0')">
+<span class="material-symbols-outlined text-lg">assignment</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">map</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Mid Rank Berkembang -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-space-md px-space-md text-center">
+<input class="school-checkbox rounded accent-primary cursor-pointer" type="checkbox" value="SMP Negeri 1 Soreang">
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-surface-container font-metric-num-md text-metric-num-md font-bold text-on-surface">4</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface group-hover:text-primary transition-colors">SMP Negeri 1 Soreang</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-mono">NPSN: 20205844</span>
+<span>•</span>
+<span>Kec. Soreang, Kab. Bandung</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Urban Farming</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">78.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 78%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">75.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full" style="width: 75%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-xs">
+<span class="font-bold">79.0</span>
+<span class="text-on-surface-variant font-mono">50:50</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 50%"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 50%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold">68.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 68%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container font-metric-num-md text-metric-num-md font-bold text-on-surface">74.8</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">sync</span>
+                  Berkembang
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Pendampingan SOP Pupuk</span>
+<span class="text-xs text-on-surface-variant">Tingkatkan efisiensi rotasi semai hidroponik</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="openDrawer('SMP Negeri 1 Soreang', '20205844', '74.8', 'Berkembang', '78.0', '75.0', '79.0', '68.0')">
+<span class="material-symbols-outlined text-lg">assignment</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">map</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Prioritas Intervensi Darurat -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-error-container/15">
+<td class="py-space-md px-space-md text-center">
+<input class="school-checkbox rounded accent-primary cursor-pointer" type="checkbox" value="SMA Mandiri Baleendah">
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-error-container text-on-error-container font-metric-num-md text-metric-num-md font-bold">31</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface group-hover:text-error transition-colors">SMA Mandiri Baleendah</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-mono">NPSN: 20228704</span>
+<span>•</span>
+<span>Kec. Baleendah, Kab. Bandung</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Urban Farming</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold text-error">48.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 48%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold text-error">52.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 52%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-xs">
+<span class="font-bold">61.0</span>
+<span class="text-on-surface-variant font-mono">65:35</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 65%"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 35%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold text-error">42.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 42%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-2.5 py-1 rounded-lg bg-error-container text-on-error-container font-metric-num-md text-metric-num-md font-extrabold">50.3</span>
+<span class="text-label-sm font-semibold text-error">Prioritas 1</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">warning</span>
+                  Prioritas Intervensi
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-error">Perbaikan Pompa &amp; TOT Guru</span>
+<span class="text-xs text-on-surface-variant">Fasilitator lapangan ditugaskan kunjungan darurat</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="openDrawer('SMA Mandiri Baleendah', '20228704', '50.3', 'Prioritas Intervensi', '48.0', '52.0', '61.0', '42.0')">
+<span class="material-symbols-outlined text-lg">assignment</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">map</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Prioritas Intervensi 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-error-container/15">
+<td class="py-space-md px-space-md text-center">
+<input class="school-checkbox rounded accent-primary cursor-pointer" type="checkbox" value="SMP Pasundan Cicalengka">
+</td>
+<td class="py-space-md px-space-md text-center">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-error-container text-on-error-container font-metric-num-md text-metric-num-md font-bold">32</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface group-hover:text-error transition-colors">SMP Pasundan Cicalengka</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-mono">NPSN: 20227914</span>
+<span>•</span>
+<span>Kec. Cicalengka, Kab. Bandung</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Circular</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold text-error">42.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 42%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold text-error">48.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 48%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center text-xs">
+<span class="font-bold">54.0</span>
+<span class="text-on-surface-variant font-mono">58:42</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full" style="width: 58%"></div>
+<div class="bg-tertiary-fixed-dim h-full" style="width: 42%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-bold text-error">38.0</span>
+<div class="w-20 bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 38%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-center">
+<div class="inline-flex flex-col items-center">
+<span class="px-2.5 py-1 rounded-lg bg-error-container text-on-error-container font-metric-num-md text-metric-num-md font-extrabold">45.2</span>
+<span class="text-label-sm font-semibold text-error">Prioritas 2</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-xs">warning</span>
+                  Prioritas Intervensi
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-error">Restrukturisasi Bank Sampah</span>
+<span class="text-xs text-on-surface-variant">LSO tidak aktif pasca pergantian kepala sekolah</span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="openDrawer('SMP Pasundan Cicalengka', '20227914', '45.2', 'Prioritas Intervensi', '42.0', '48.0', '54.0', '38.0')">
+<span class="material-symbols-outlined text-lg">assignment</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-secondary transition-colors">
+<span class="material-symbols-outlined text-lg">map</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Table Metadata Footer -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Menampilkan <strong class="text-on-surface font-semibold">1 - 6</strong> dari <strong class="text-on-surface font-semibold">32</strong> sekolah terdaftar
+        </span>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm disabled:opacity-40" disabled="">Sebelumnya</button>
+<button class="px-3 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm shadow-sm">1</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container">2</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container">3</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container">Berikutnya</button>
+</div>
+</div>
+</div>
+<!-- Strategic Deep Dive Grid: Radar Comparison + Algorithmic Insights + Audit Verification History -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Panel 1: Radar Chart Comparison (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Komparasi Pilar: Top 3 vs Rata-rata Wilayah</h3>
+<span class="p-1.5 rounded-lg bg-surface-container text-secondary material-symbols-outlined text-base">radar</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Evaluasi keseimbangan performa antar pilar rubrik penilaian program sekolah percontohan.</p>
+</div>
+<!-- Inline SVG Radar Visualization -->
+<div class="my-space-md flex flex-col items-center justify-center">
+<svg class="w-64 h-64 overflow-visible" viewBox="0 0 200 200">
+<!-- Background Polygons -->
+<polygon fill="none" points="100,10 190,100 100,190 10,100" stroke="#dae2fd" stroke-width="1"></polygon>
+<polygon fill="none" points="100,32 168,100 100,168 32,100" stroke="#dae2fd" stroke-width="1"></polygon>
+<polygon fill="none" points="100,55 145,100 100,145 55,100" stroke="#dae2fd" stroke-width="1"></polygon>
+<polygon fill="none" points="100,77 123,100 100,123 77,100" stroke="#dae2fd" stroke-width="1"></polygon>
+<!-- Cross Axis Lines -->
+<line stroke="#bccac0" stroke-dasharray="2,2" stroke-width="1" x1="100" x2="100" y1="10" y2="190"></line>
+<line stroke="#bccac0" stroke-dasharray="2,2" stroke-width="1" x1="10" x2="190" y1="100" y2="100"></line>
+<!-- Axis Labels -->
+<text class="fill-current text-on-surface-variant text-[9px] font-bold" text-anchor="middle" x="100" y="3">P1: Sarpras (25%)</text>
+<text class="fill-current text-on-surface-variant text-[9px] font-bold" text-anchor="start" x="195" y="103">P2: Guru (30%)</text>
+<text class="fill-current text-on-surface-variant text-[9px] font-bold" text-anchor="middle" x="100" y="202">P3: Siswa (20%)</text>
+<text class="fill-current text-on-surface-variant text-[9px] font-bold" text-anchor="end" x="5" y="103">P4: Circular (25%)</text>
+<!-- Area 1: Regional Average (Blue/Secondary) -->
+<!-- P1: 80% (28), P2: 78% (170), P3: 82% (173), P4: 76% (31) -->
+<polygon fill="#cce5ff" fill-opacity="0.45" points="100,28 170,100 100,173 31,100" stroke="#006398" stroke-width="2"></polygon>
+<!-- Area 2: Top 1 School - SMK 1 Majalaya (Emerald/Primary) -->
+<!-- P1: 94% (15), P2: 92% (182), P3: 90.5% (181), P4: 91% (18) -->
+<polygon fill="#85f8c4" fill-opacity="0.45" points="100,15 182,100 100,181 18,100" stroke="#006948" stroke-width="2.5"></polygon>
+<!-- Nodes for Top 1 -->
+<circle cx="100" cy="15" fill="#006948" r="3.5"></circle>
+<circle cx="182" cy="100" fill="#006948" r="3.5"></circle>
+<circle cx="100" cy="181" fill="#006948" r="3.5"></circle>
+<circle cx="18" cy="100" fill="#006948" r="3.5"></circle>
+</svg>
+</div>
+<!-- Legend Bar -->
+<div class="pt-space-sm flex items-center justify-around bg-surface-container-low px-space-md py-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-sm bg-primary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">SMK N 1 Majalaya (91.9)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-sm bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Rata-rata Wilayah (81.4)</span>
+</div>
+</div>
+</div>
+<!-- Panel 2: DSS Algorithmic Recommendations & Decision Tree (4 Cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Insight Algoritma Rekomendasi</h3>
+<span class="p-1.5 rounded-lg bg-surface-container text-primary material-symbols-outlined text-base">psychology</span>
+</div>
+<!-- Insight Card 1: Replikasi Mandiri -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex gap-space-sm">
+<div class="mt-0.5 p-1 rounded bg-primary-fixed text-on-primary-fixed material-symbols-outlined text-base shrink-0">workspace_premium</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Center of Excellence Baru (14 Unit)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Sekolah dengan skor &gt;80.0 telah mencapai <strong class="text-on-surface">kemandirian sirkular 84%</strong>. Siap dihubungkan langsung ke program pendanaan kredit mikro CSR hijau tahap II.
+              </p>
+</div>
+</div>
+<!-- Insight Card 2: Intervensi Darurat -->
+<div class="p-space-sm bg-error-container/20 rounded-lg flex gap-space-sm">
+<div class="mt-0.5 p-1 rounded bg-error-container text-on-error-container material-symbols-outlined text-base shrink-0">fmd_bad</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-error">Bottleneck: Rotasi Guru &amp; Pemeliharaan</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Pada 6 sekolah prioritas intervensi, kendala terbesar adalah ketiadaan guru pembimbing bersertifikat setelah mutasi ASN semester genap.
+              </p>
+</div>
+</div>
+<!-- Insight Card 3: Gender Parity Notice -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex gap-space-sm">
+<div class="mt-0.5 p-1 rounded bg-secondary-fixed text-on-secondary-fixed material-symbols-outlined text-base shrink-0">group</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Keseimbangan Partisipasi Siswa</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Rasio keterlibatan siswi putri di struktur pengurus bank sampah mencapai <strong class="text-on-surface">51.4%</strong>, melampaui indikator target SDG 5 (Gender Equality).
+              </p>
+</div>
+</div>
+</div>
+<button class="mt-space-md w-full py-space-sm rounded-lg bg-surface-container text-primary font-label-md text-label-md font-bold hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1">
+<span>Kirim Notifikasi Rekomendasi ke Tim M&amp;E</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+<!-- Panel 3: Verifikasi Dokumen Rubrik & Bukti Fisik Lapangan (3 Cols) -->
+<div class="lg:col-span-3 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Audit Rubrik Lapangan</h3>
+<span class="p-1.5 rounded-lg bg-surface-container text-tertiary material-symbols-outlined text-base">verified_user</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Status verifikasi berkas bukti fisik Q3 oleh auditor independen.</p>
+<div class="mt-space-md flex flex-col gap-space-sm">
+<!-- Doc 1 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-xl">description</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold truncate text-on-surface">BAST_SMKN1_Majalaya.pdf</span>
+<span class="text-[10px] text-on-surface-variant">Telah diverifikasi • Q3 2024</span>
+</div>
+</div>
+<span class="p-1 rounded bg-primary-fixed text-on-primary-fixed material-symbols-outlined text-xs">done_all</span>
+</div>
+<!-- Doc 2 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-secondary text-xl">description</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold truncate text-on-surface">Laporan_Keuangan_Circular_Banjaran.pdf</span>
+<span class="text-[10px] text-on-surface-variant">Telah diverifikasi • Q3 2024</span>
+</div>
+</div>
+<span class="p-1 rounded bg-primary-fixed text-on-primary-fixed material-symbols-outlined text-xs">done_all</span>
+</div>
+<!-- Doc 3 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-tertiary text-xl">pending_actions</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold truncate text-on-surface">Foto_Perbaikan_Greenhouse_Baleendah.zip</span>
+<span class="text-[10px] text-error font-medium">Revisi berkas diminta</span>
+</div>
+</div>
+<span class="p-1 rounded bg-error-container text-on-error-container material-symbols-outlined text-xs">priority_high</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Kelengkapan Berkas:</span>
+<span class="font-bold text-on-surface">29 / 32 Sekolah (90.6%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide-out Drawer: School Rubric Detail Inspection (Level 3 Elevation) -->
+<div class="fixed inset-y-0 right-0 w-full sm:w-[520px] bg-surface-container-lowest shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between" id="school-detail-drawer">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold" id="drawer-badge">Mandiri / Unggul</span>
+<span class="text-xs text-on-surface-variant font-mono" id="drawer-npsn">NPSN: 20228391</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface" id="drawer-school-name">SMK Negeri 1 Majalaya</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Inspeksi Lengkap Lembar Evaluasi Rubrik Mandiri DSS</span>
+</div>
+<button class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="closeDrawer()">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+<!-- Drawer Body (Scrollable) -->
+<div class="p-space-lg overflow-y-auto flex-1 flex flex-col gap-space-lg">
+<!-- Composite Score Badge Header -->
+<div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Skor Gabungan Terbobot (SAW)</span>
+<span class="font-metric-num-lg text-metric-num-lg text-primary" id="drawer-composite-score">91.9 / 100</span>
+<span class="text-xs text-on-surface-variant">Memenuhi kualifikasi hibah peralatan lanjutan</span>
+</div>
+<div class="w-16 h-16 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">emoji_events</span>
+</div>
+</div>
+<!-- Real Documentation Implementation Photo Thumbnail -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Bukti Lapangan Pelaksanaan Q3</span>
+<div class="h-36 w-full rounded-lg overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="A modern agricultural vocational high school in West Java Indonesia featuring neat high-tech hydroponic vertical farm installations, solar powered moisture sensors, with students in practical uniform inspecting green lettuce harvest under bright diffused morning light, modern greenhouse structure, corporate CSR partnership badge." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZPmhno61CFWXnxgPEfyNR9QW1TiFE-1GO5cz6ANdycFr-zIfDH6b9QQbIsNjKNFNTtEvqh9isnEaeolfq5R-sYLSxMc7BpFmSkJ4GzU9WeE9Sb07wPT1ahwq_dRDB9qAH2u2hTlVq1JI0CPyl5J68K9QS5tE7umx61raMLAsVaIGhMN29rzlOyb4_tUllmJ8tLJo4h89k3Q3ShLdBDA7L8yudFTSUphI4fyX_NRQhYEchRMcxPhoR">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-2.5">
+<span class="text-white text-xs font-medium">Instalasi Smart Greenhouse &amp; Pembibitan Siswa Mandiri</span>
+</div>
+</div>
+</div>
+<!-- Detailed Breakdown of 4 Pillars -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Rincian 4 Pilar Penilaian</span>
+<!-- Pillar 1 item -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md font-bold text-on-surface">Pilar 1: Sarana Prasarana (Bobot 25%)</span>
+<span class="font-label-md text-label-md font-bold text-primary" id="drawer-p1">94.0%</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" id="drawer-p1-bar" style="width: 94%"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Irigasi tetes beroperasi otomatis, sensor kelembaban tanah aktif 24/7.</p>
+</div>
+<!-- Pillar 2 item -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md font-bold text-on-surface">Pilar 2: Guru &amp; Kurikulum (Bobot 30%)</span>
+<span class="font-label-md text-label-md font-bold text-secondary" id="drawer-p2">92.0%</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" id="drawer-p2-bar" style="width: 92%"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">4 Guru mengantongi sertifikat TOT Urban Farming Nasional.</p>
+</div>
+<!-- Pillar 3 item -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md font-bold text-on-surface">Pilar 3: Keterlibatan Siswa &amp; Gender (Bobot 20%)</span>
+<span class="font-label-md text-label-md font-bold text-tertiary" id="drawer-p3">90.5%</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" id="drawer-p3-bar" style="width: 90.5%"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Partisipasi siswa aktif 142 orang; rasio ketua divisi perempuan 51%.</p>
+</div>
+<!-- Pillar 4 item -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md font-bold text-on-surface">Pilar 4: Kemandirian Sirkular (Bobot 25%)</span>
+<span class="font-label-md text-label-md font-bold text-primary-container" id="drawer-p4">91.0%</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" id="drawer-p4-bar" style="width: 91%"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Penjualan sayur menembus Rp 4.2jt/bulan masuk ke kas unit produksi sekolah.</p>
+</div>
+</div>
+<!-- Rubric Action Plan Checkpoints -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Checklist Rekomendasi Terprogram</span>
+<div class="space-y-2">
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-low cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface">Pengajuan Replikasi Skala Kawasan (Hibah CSR Tahap 2)</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-low cursor-pointer">
+<input checked="" class="accent-primary rounded" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface">Pelibatan sebagai Narasumber Studi Banding 5 Sekolah Binaan Baru</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded bg-surface-container-low cursor-pointer">
+<input class="accent-primary rounded" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface">Penyusunan Kurikulum Muatan Lokal Vokasi Agribisnis Berkelanjutan</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between gap-space-sm">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" onclick="closeDrawer()">
+        Tutup Panel
+      </button>
+<div class="flex items-center gap-2">
+<button class="px-space-md py-space-sm rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary/90 transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-base">pin_drop</span>
+<span>Sorot di Peta GIS</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-base">download</span>
+<span>Unduh Berkas Rubrik</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Backdrop for Slide-out Drawer -->
+<div class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden transition-opacity" id="drawer-backdrop" onclick="closeDrawer()"></div>
+<!-- Interactive Weight Simulation Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm hidden" id="weight-sim-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-xl w-full p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="p-1.5 rounded-lg bg-primary-fixed text-on-primary-fixed material-symbols-outlined text-base">tune</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Simulasi Bobot Kriteria DSS (AHP/SAW)</h3>
+</div>
+<button class="p-1 rounded-full hover:bg-surface-container text-on-surface-variant" onclick="toggleSimModal()">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Sesuaikan bobot prioritas untuk melihat simulasi dampak pemeringkatan ulang. Total bobot harus berjumlah 100%.
+      </p>
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-semibold text-on-surface">Pilar 1: Infrastruktur &amp; Fasilitas</span>
+<span class="font-bold text-primary" id="val-p1">25%</span>
+</div>
+<input class="w-full accent-primary" max="50" min="10" oninput="document.getElementById('val-p1').innerText = this.value + '%'" type="range" value="25">
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-semibold text-on-surface">Pilar 2: Integrasi Kurikulum &amp; Guru</span>
+<span class="font-bold text-secondary" id="val-p2">30%</span>
+</div>
+<input class="w-full accent-secondary" max="50" min="10" oninput="document.getElementById('val-p2').innerText = this.value + '%'" type="range" value="30">
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-semibold text-on-surface">Pilar 3: Keterlibatan Siswa &amp; Gender</span>
+<span class="font-bold text-tertiary" id="val-p3">20%</span>
+</div>
+<input class="w-full accent-tertiary" max="50" min="10" oninput="document.getElementById('val-p3').innerText = this.value + '%'" type="range" value="20">
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="font-semibold text-on-surface">Pilar 4: Keberlanjutan Circular Economy</span>
+<span class="font-bold text-primary-container" id="val-p4">25%</span>
+</div>
+<input class="w-full accent-primary-container" max="50" min="10" oninput="document.getElementById('val-p4').innerText = this.value + '%'" type="range" value="25">
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Metode: Simple Additive Weighting (SAW)</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" onclick="toggleSimModal()">Batal</button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" onclick="applySimWeights()">Terapkan Simulasi</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interactions JavaScript -->
+<script>
+    // Selection state handling for comparative study
+    const checkAll = document.getElementById('select-all');
+    const checkboxes = document.querySelectorAll('.school-checkbox');
+    const compareText = document.getElementById('compare-text');
+    let selectedCount = 0;
+
+    function updateCompareButton() {
+      const checkedBoxes = document.querySelectorAll('.school-checkbox:checked');
+      selectedCount = checkedBoxes.length;
+      compareText.innerText = `Bandingkan Terpilih (${selectedCount}/3)`;
+      const compareBtn = document.getElementById('compare-btn');
+      if (selectedCount > 0) {
+        compareBtn.classList.remove('bg-primary');
+        compareBtn.classList.add('bg-primary-container', 'ring-2', 'ring-primary-fixed');
+      } else {
+        compareBtn.classList.remove('bg-primary-container', 'ring-2', 'ring-primary-fixed');
+        compareBtn.classList.add('bg-primary');
+      }
+    }
+
+    if (checkAll) {
+      checkAll.addEventListener('change', function() {
+        checkboxes.forEach((cb, idx) => {
+          if (idx < 3) { // limit multi comparison to 3
+            cb.checked = checkAll.checked;
+          }
+        });
+        updateCompareButton();
+      });
+    }
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', function() {
+        const checkedCount = document.querySelectorAll('.school-checkbox:checked').length;
+        if (checkedCount > 3) {
+          alert('Maksimal komparasi adalah 3 sekolah untuk visualisasi optimal.');
+          this.checked = false;
+        }
+        updateCompareButton();
+      });
+    });
+
+    // Drawer Functionality
+    function openDrawer(name, npsn, score, status, p1, p2, p3, p4) {
+      document.getElementById('drawer-school-name').innerText = name;
+      document.getElementById('drawer-npsn').innerText = `NPSN: ${npsn}`;
+      document.getElementById('drawer-composite-score').innerText = `${score} / 100`;
+      document.getElementById('drawer-badge').innerText = status;
+
+      // Update pillars
+      document.getElementById('drawer-p1').innerText = `${p1}%`;
+      document.getElementById('drawer-p1-bar').style.width = `${p1}%`;
+      document.getElementById('drawer-p2').innerText = `${p2}%`;
+      document.getElementById('drawer-p2-bar').style.width = `${p2}%`;
+      document.getElementById('drawer-p3').innerText = `${p3}%`;
+      document.getElementById('drawer-p3-bar').style.width = `${p3}%`;
+      document.getElementById('drawer-p4').innerText = `${p4}%`;
+      document.getElementById('drawer-p4-bar').style.width = `${p4}%`;
+
+      const drawer = document.getElementById('school-detail-drawer');
+      const backdrop = document.getElementById('drawer-backdrop');
+      drawer.classList.remove('translate-x-full');
+      backdrop.classList.remove('hidden');
+    }
+
+    function closeDrawer() {
+      const drawer = document.getElementById('school-detail-drawer');
+      const backdrop = document.getElementById('drawer-backdrop');
+      drawer.classList.add('translate-x-full');
+      backdrop.classList.add('hidden');
+    }
+
+    // Modal Simulation Functionality
+    function toggleSimModal() {
+      const modal = document.getElementById('weight-sim-modal');
+      modal.classList.toggle('hidden');
+    }
+
+    function applySimWeights() {
+      toggleSimModal();
+      alert('Simulasi pembobotan AHP/SAW berhasil dikalkulasi ulang pada matriks evaluasi.');
+    }
+  </script>
+</div></main></body></html>

@@ -1,0 +1,105 @@
+/* ============================================
+   Toast Notification - reusable di semua halaman admin
+   ============================================ */
+
+   .toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: calc(100vw - 32px);
+}
+
+.toast-container .toast {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px -6px var(--toast-glow, rgba(0,0,0,.16)), 0 2px 8px rgba(0,0,0,.05);
+    padding: 14px 16px;
+    min-width: 300px;
+    max-width: 380px;
+    font-family: inherit;
+    animation: toast-in .3s cubic-bezier(.16,1,.3,1);
+}
+
+.toast-container .toast.toast-hide {
+    animation: toast-out .2s ease-in forwards;
+}
+
+.toast--success { --toast-glow: rgba(52, 211, 153, .35); }
+.toast--error   { --toast-glow: rgba(248, 113, 113, .35); }
+.toast--warning { --toast-glow: rgba(251, 191, 36, .35); }
+.toast--info    { --toast-glow: rgba(148, 163, 184, .35); }
+
+.toast-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.toast-icon svg { width: 20px; height: 20px; }
+
+.toast--success .toast-icon { background: #34d399; }
+.toast--error   .toast-icon { background: #f87171; }
+.toast--warning .toast-icon { background: #fbbf24; }
+.toast--info    .toast-icon { background: #94a3b8; }
+
+.toast-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.toast-title {
+    font-weight: 800;
+    font-size: .95rem;
+    color: #16181a;
+    line-height: 1.2;
+}
+
+.toast-msg {
+    font-size: .82rem;
+    color: #6b7280;
+    line-height: 1.35;
+}
+
+.toast-close {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 1.2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toast-close:hover {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+@keyframes toast-in {
+    from { opacity: 0; transform: translateX(24px) scale(.97); }
+    to   { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes toast-out {
+    from { opacity: 1; transform: translateX(0); }
+    to   { opacity: 0; transform: translateX(24px); }
+}
