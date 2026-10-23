@@ -55,6 +55,46 @@ try {
         // Abaikan jika tabel monev belum dipakai
     }
 
+    // Ambil data master wilayah Indonesia (Provinsi & Kabupaten/Kota) untuk reverse-geocoding koordinat presisi
+    $provMap = [];
+    $kabMasterList = [];
+    try {
+        $pStmt = $pdo->query("SELECT kode, nama FROM wilayah WHERE CHAR_LENGTH(kode) = 2");
+        while ($r = $pStmt->fetch(PDO::FETCH_ASSOC)) {
+            $provMap[$r['kode']] = $r['nama'];
+        }
+        $kStmt = $pdo->query("SELECT kode, nama, latitude, longitude FROM wilayah WHERE CHAR_LENGTH(kode) = 5 AND latitude IS NOT NULL AND longitude IS NOT NULL");
+        while ($r = $kStmt->fetch(PDO::FETCH_ASSOC)) {
+            $provKode = substr($r['kode'], 0, 2);
+            $kabMasterList[] = [
+                'kode' => $r['kode'],
+                'kab'  => $r['nama'],
+                'prov' => $provMap[$provKode] ?? 'Indonesia',
+                'lat'  => (float) $r['latitude'],
+                'lng'  => (float) $r['longitude'],
+            ];
+        }
+    } catch (Exception $e) {
+        // Fallback jika tabel wilayah belum siap
+    }
+
+    $cariWilayahOtomatis = function($lat, $lng) use (&$kabMasterList) {
+        if (empty($kabMasterList) || $lat === null || $lng === null) return null;
+        $minDist = PHP_FLOAT_MAX;
+        $best = null;
+        $cosLat = cos(deg2rad($lat));
+        foreach ($kabMasterList as $k) {
+            $dLat = $lat - $k['lat'];
+            $dLng = ($lng - $k['lng']) * $cosLat;
+            $distSq = ($dLat * $dLat) + ($dLng * $dLng);
+            if ($distSq < $minDist) {
+                $minDist = $distSq;
+                $best = $k;
+            }
+        }
+        return $best;
+    };
+
     $sekolahGrouped = [];
     $schoolId = 1;
 
@@ -66,9 +106,17 @@ try {
 
         if (!isset($sekolahGrouped[$instKey])) {
             // Tentukan Provinsi & Kabupaten/Kota
-            $prov = 'Jawa Barat';
-            $kab = 'Kota Bogor';
-            $lokasiKegiatan = $p['lokasi_kegiatan'] ?? '';
+            $latVal = !empty($p['latitude']) ? (float)$p['latitude'] : null;
+            $lngVal = !empty($p['longitude']) ? (float)$p['longitude'] : null;
+            $wilayahSesuai = $cariWilayahOtomatis($latVal, $lngVal);
+
+            if ($wilayahSesuai) {
+                $prov = $wilayahSesuai['prov'];
+                $kab  = $wilayahSesuai['kab'];
+            } else {
+                $prov = 'Jawa Barat';
+                $kab = 'Kota Bogor';
+                $lokasiKegiatan = $p['lokasi_kegiatan'] ?? '';
 
             if (stripos($lokasiKegiatan, 'Semarang') !== false || stripos($instName, 'Semarang') !== false) {
                 $prov = 'Jawa Tengah';
@@ -104,6 +152,7 @@ try {
             } elseif (stripos($instName, 'Jakarta') !== false || stripos($lokasiKegiatan, 'Jakarta') !== false) {
                 $prov = 'DKI Jakarta';
                 $kab = 'Jakarta Pusat';
+            }
             }
 
             // Estimasi data dapodik berdasarkan jenjang sekolah
@@ -257,8 +306,8 @@ try {
         $npsnBase = 20000000 + (abs(crc32($instName)) % 900000);
         $sk['npsn'] = (string) $npsnBase;
 
-        // Ekstrak nama kecamatan / sub-wilayah jika ada
-        $sk['kec'] = 'Kec. ' . (explode(' ', $sk['kab'])[1] ?? 'Kota');
+        // Simpan nama wilayah
+        $sk['kec'] = $sk['kab'];
 
         // Rasio gender L:P
         $gL = $sk['guru_gender']['laki'];

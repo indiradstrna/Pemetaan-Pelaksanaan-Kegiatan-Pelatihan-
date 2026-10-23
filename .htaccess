@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Jika diakses di domain hosting dan masih membawa prefix /biotrop-gis/,
+    # redirect ke URL bersih tanpa prefix /biotrop-gis/
+    RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
+    RewriteCond %{REQUEST_URI} ^/biotrop-gis/(.*)$ [NC]
+    RewriteRule ^biotrop-gis/(.*)$ /$1 [R=301,L]
+</IfModule>

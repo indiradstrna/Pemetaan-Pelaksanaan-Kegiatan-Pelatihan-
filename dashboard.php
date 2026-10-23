@@ -582,7 +582,7 @@ $userInitial = strtoupper(substr($userNama, 0, 1));
                     <div class="flex items-center flex-wrap gap-3">
                         <div class="relative flex items-center">
                             <span class="material-symbols-outlined text-on-surface-variant absolute left-2.5 text-base">search</span>
-                            <input id="searchInput" oninput="applyFilters()" class="pl-8 pr-3 py-1.5 rounded-lg bg-surface-container-lowest text-xs text-on-surface focus:outline-none focus:ring-1 focus:ring-primary w-60 shadow-sm border border-surface-container" placeholder="Cari nama sekolah / NPSN / kab..." type="text">
+                            <input id="searchInput" oninput="applyFilters()" class="pl-8 pr-3 py-1.5 rounded-lg bg-surface-container-lowest text-xs text-on-surface focus:outline-none focus:ring-1 focus:ring-primary w-60 shadow-sm border border-surface-container" placeholder="Cari nama sekolah / NPSN..." type="text">
                         </div>
 
                         <div class="flex items-center gap-1.5 text-on-surface-variant text-xs font-semibold">
@@ -805,7 +805,7 @@ $userInitial = strtoupper(substr($userNama, 0, 1));
                     <span class="text-xs text-on-surface-variant font-mono" id="drawer-npsn">NPSN: 20228391</span>
                 </div>
                 <h3 class="text-xl font-bold text-on-surface" id="drawer-school-name">SMK Negeri 1 Majalaya</h3>
-                <span class="text-xs text-on-surface-variant" id="drawer-school-loc">Kec. Majalaya, Kab. Bandung</span>
+                <span class="text-xs text-on-surface-variant" id="drawer-school-loc">Mitra Pelatihan HCID SEAMEO BIOTROP</span>
             </div>
             <button class="p-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" onclick="closeDrawer()">
                 <span class="material-symbols-outlined text-xl">close</span>
@@ -1298,7 +1298,7 @@ $userInitial = strtoupper(substr($userNama, 0, 1));
                             <div class="flex items-center gap-1.5 text-on-surface-variant text-[11px] mt-0.5">
                                 <span class="font-mono">NPSN: ${sk.npsn}</span>
                                 <span>&bull;</span>
-                                <span>${sk.kec}, ${sk.kab}</span>
+                                <span>${sk.kab}, ${sk.prov}</span>
                             </div>
                         </div>
                     </td>
@@ -1578,7 +1578,7 @@ $userInitial = strtoupper(substr($userNama, 0, 1));
 
             document.getElementById('drawer-school-name').innerText = sk.nama;
             document.getElementById('drawer-npsn').innerText = `NPSN: ${sk.npsn}`;
-            document.getElementById('drawer-school-loc').innerText = `Kec. ${sk.kec}, ${sk.kab}, ${sk.prov}`;
+            document.getElementById('drawer-school-loc').innerText = `${sk.kab}, ${sk.prov} • ${sk.tipe_institusi || 'Institusi'}`;
             document.getElementById('drawer-composite-score').innerText = `${sk.score.toFixed(1)} / 100`;
             document.getElementById('drawer-badge').innerText = sk.category;
 
@@ -1697,14 +1697,13 @@ $userInitial = strtoupper(substr($userNama, 0, 1));
 
         // CSV Export Functionality
         function exportMatrixCSV() {
-            let csv = "Rank,Nama Sekolah,NPSN,Kecamatan,Kabupaten,Provinsi,Program,P1_Sarpras,P2_Guru,P3_Siswa,P4_Rencana_Aksi,Skor_DSS_SAW,Status_Kelayakan,Rekomendasi\n";
+            let csv = "Rank,Nama Sekolah,NPSN,Wilayah,Provinsi,Program,P1_Sarpras,P2_Guru,P3_Siswa,P4_Rencana_Aksi,Skor_DSS_SAW,Status_Kelayakan,Rekomendasi\n";
 
             filteredSchools.forEach(s => {
                 const row = [
                     s.rank,
                     `"${s.nama}"`,
                     `"${s.npsn}"`,
-                    `"${s.kec}"`,
                     `"${s.kab}"`,
                     `"${s.prov}"`,
                     `"${s.tracks.join(' & ')}"`,
